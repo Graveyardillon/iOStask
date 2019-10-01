@@ -11,14 +11,33 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
       VStack(alignment: .leading) {
-        DoView().frame(minWidth: 0, maxWidth: .infinity,                     minHeight: 0, maxHeight: .infinity)
+        DoView()
+          .frame(minWidth: 0, maxWidth: .infinity,                     minHeight: 0, maxHeight: .infinity)
           .background(Color(red: 245/255, green: 127/255, blue: 17/255))
+          .gesture(
+            LongPressGesture(minimumDuration: 0.3)
+            .onEnded{ _ in
+               print("Hello")
+            }
+          )
         
         DoingView().frame(minWidth: 0, maxWidth: .infinity,                     minHeight: 0, maxHeight: .infinity)
           .background(Color(red: 251/255, green: 192/255, blue: 45/255))
+          .gesture(
+            LongPressGesture(minimumDuration: 0.3)
+            .onEnded{ _ in
+               print("Hello")
+            }
+          )
 
         DoneView().frame(minWidth: 0, maxWidth: .infinity,                     minHeight: 0, maxHeight: .infinity)
           .background(Color(red: 255/255, green: 235/255, blue: 59/255))
+          .gesture(
+            LongPressGesture(minimumDuration: 0.3)
+            .onEnded{ _ in
+               print("Hello")
+            }
+          )
       }
     }
 }
