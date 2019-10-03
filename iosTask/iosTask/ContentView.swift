@@ -5,8 +5,28 @@
 //  Created by Papillon on 2019/09/30.
 //  Copyright © 2019 Papillon. All rights reserved.
 //
-
 import SwiftUI
+
+/*
+
+class ViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    let vc: UIHostingController = UIHostingController(rootView: ContentView())
+    self.addChild(vc)
+    self.view.addSubview(vc.view)
+    vc.didMove(toParent: self)
+    
+    vc.view.translatesAutoresizingMaskIntoConstraints = false
+    vc.view.heightAnchor.constraint(equalToConstant: 320).isActive = true
+    vc.view.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 16).isActive = true
+    vc.view.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -16).isActive = true
+    vc.view.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+  }
+}
+ 
+*/
 
 struct ContentView: View {
     var body: some View {
@@ -17,7 +37,9 @@ struct ContentView: View {
           .gesture(
             LongPressGesture(minimumDuration: 0.3)
             .onEnded{ _ in
-               print("Hello")
+              print("Hello")
+            
+              
             }
           )
         
